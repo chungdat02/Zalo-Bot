@@ -1,8 +1,7 @@
-
-module.exports = (api, zca) => {
-    const {anyEvent, onLoad, handleReaction, handleReply, handleEvent, handleCommand} = require("./action")(api, zca);
+module.exports = (api, Zalo) => {
+    const {anyEvent, onLoad, handleReaction, handleReply, handleEvent, handleCommand} = require("./action")(api, Zalo);
     // Echo bot
-    onLoad();
+  onLoad();
     api.listener.on("message", (message) => {
         console.log(message);
         anyEvent(message);
